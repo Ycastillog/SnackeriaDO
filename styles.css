@@ -195,12 +195,12 @@ h1 {
 
 .hero-title span {
   color: var(--navy);
-  font-size: clamp(3.2rem, 7.1vw, 6.9rem);
+  font-size: clamp(3rem, 6.4vw, 6.2rem);
 }
 
 .hero-title strong {
   color: var(--blue);
-  font-size: clamp(4.55rem, 10.2vw, 9.9rem);
+  font-size: clamp(4.9rem, 11vw, 10.6rem);
   letter-spacing: 0;
   text-shadow: 0 16px 42px rgba(18, 150, 243, 0.18);
 }
@@ -368,6 +368,82 @@ p {
   font-weight: 900;
 }
 
+.productivity-stage {
+  min-height: 590px;
+}
+
+.productivity-visual {
+  position: relative;
+  z-index: 2;
+  width: min(520px, 92vw);
+  border: 1px solid rgba(255, 255, 255, 0.76);
+  border-radius: 8px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 40px 90px rgba(11, 30, 51, 0.16);
+  backdrop-filter: blur(18px);
+}
+
+.visual-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.visual-header img {
+  width: 92px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.visual-header span {
+  border-radius: 999px;
+  padding: 8px 12px;
+  color: var(--navy);
+  background: var(--yellow);
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.visual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.visual-grid article {
+  min-height: 132px;
+  display: grid;
+  align-content: space-between;
+  border: 1px solid rgba(18, 150, 243, 0.14);
+  border-radius: 8px;
+  padding: 18px;
+  background:
+    linear-gradient(135deg, rgba(18, 150, 243, 0.08), rgba(255, 255, 255, 0.92)),
+    var(--white);
+}
+
+.visual-grid svg {
+  width: 34px;
+  height: 34px;
+  color: var(--blue);
+}
+
+.visual-flow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.visual-flow span {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--blue), var(--yellow));
+}
+
 .status-pill,
 .metric-card {
   position: absolute;
@@ -476,6 +552,105 @@ p {
   background:
     linear-gradient(135deg, rgba(18, 150, 243, 0.08), rgba(255, 255, 255, 0) 42%),
     var(--light);
+}
+
+.about {
+  background: var(--white);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(360px, 1fr);
+  gap: 46px;
+  align-items: start;
+}
+
+.about-copy {
+  display: grid;
+  gap: 16px;
+}
+
+.about-copy p {
+  margin: 0;
+}
+
+.solution-visual {
+  position: relative;
+  min-height: 520px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(18, 150, 243, 0.11) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(18, 150, 243, 0.11) 1px, transparent 1px),
+    radial-gradient(circle at 52% 44%, rgba(247, 201, 72, 0.22), transparent 24%),
+    linear-gradient(135deg, rgba(18, 150, 243, 0.08), rgba(255, 255, 255, 0.86));
+  background-size: 34px 34px, 34px 34px, auto, auto;
+  box-shadow: var(--soft-shadow);
+}
+
+.solution-node {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: var(--navy);
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: var(--soft-shadow);
+  backdrop-filter: blur(16px);
+  font-weight: 900;
+}
+
+.solution-node svg {
+  width: 22px;
+  height: 22px;
+  color: var(--blue);
+}
+
+.center-node {
+  left: 50%;
+  top: 50%;
+  width: 210px;
+  min-height: 170px;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.center-node img {
+  width: 100px;
+  height: 82px;
+  object-fit: contain;
+}
+
+.center-node span {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.node-one {
+  left: 8%;
+  top: 16%;
+}
+
+.node-two {
+  right: 8%;
+  top: 18%;
+}
+
+.node-three {
+  left: 10%;
+  bottom: 18%;
+}
+
+.node-four {
+  right: 10%;
+  bottom: 16%;
 }
 
 .machine-gallery {
@@ -587,8 +762,32 @@ p {
 
 .why,
 .products,
+.vision,
 .support-cta {
   background: var(--white);
+}
+
+.vision-card {
+  width: min(980px, 100%);
+  margin: 0 auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 32px;
+  text-align: center;
+  background:
+    linear-gradient(135deg, rgba(18, 150, 243, 0.08), rgba(255, 255, 255, 0.88)),
+    var(--white);
+  box-shadow: var(--soft-shadow);
+}
+
+.vision-card h2 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vision-card p {
+  max-width: 760px;
+  margin: 0 auto;
 }
 
 .product-grid {
@@ -1087,6 +1286,35 @@ select:focus {
   object-fit: cover;
 }
 
+.support-visual {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.support-visual div {
+  min-height: 130px;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: var(--soft-shadow);
+}
+
+.support-visual svg {
+  width: 32px;
+  height: 32px;
+  color: var(--blue);
+}
+
+.support-visual span {
+  font-weight: 900;
+}
+
 .reveal {
   opacity: 1;
   transform: none;
@@ -1151,7 +1379,8 @@ select:focus {
   .enterprise-grid,
   .machine-real-grid,
   .portal-grid,
-  .network-map {
+  .network-map,
+  .about-grid {
     grid-template-columns: 1fr;
     gap: 36px;
   }
@@ -1224,7 +1453,7 @@ select:focus {
   }
 
   .hero-title span {
-    font-size: clamp(2.85rem, 15vw, 4.2rem);
+    font-size: clamp(2.45rem, 11vw, 3rem);
   }
 
   .hero-title strong {
@@ -1288,6 +1517,35 @@ select:focus {
   .gallery-side img,
   .portal-photo img {
     height: 260px;
+  }
+
+  .productivity-stage {
+    min-height: 470px;
+  }
+
+  .visual-grid,
+  .support-visual {
+    grid-template-columns: 1fr;
+  }
+
+  .solution-visual {
+    min-height: 620px;
+  }
+
+  .center-node,
+  .solution-node {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    transform: none;
+    width: auto;
+    margin: 14px;
+  }
+
+  .center-node {
+    margin-top: 38px;
   }
 
   .map-panel {

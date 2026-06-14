@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=9" />
+    <link rel="stylesheet" href="styles.css?v=10" />
   </head>
   <body>
     <header class="site-header" id="inicio">
@@ -27,7 +27,7 @@
           <i data-lucide="menu"></i>
         </button>
         <div class="nav-links">
-          <a href="#maquina">Nuestra maquina</a>
+          <a href="#maquina">Solucion</a>
           <a href="#productos">Productos</a>
           <a href="#ubicaciones">Ubicaciones</a>
           <a href="#empresas">Para Empresas</a>
@@ -46,16 +46,16 @@
               Red inteligente de vending
             </div>
             <h1 id="hero-title" class="hero-title">
-              <span>TU ANTOJO</span>
-              <strong>AHORA</strong>
+              <span>CONVENIENCIA</span>
+              <strong>24/7</strong>
             </h1>
             <p>
-              Maquinas vending inteligentes para empresas, universidades,
-              gimnasios y espacios comerciales.
+              Snackeria es un catalizador de productividad.
             </p>
             <p class="hero-support">
-              Operamos maquinas vending para que tu empresa ofrezca conveniencia
-              sin administrar inventario, personal ni mantenimiento.
+              Ofrecemos conveniencia, disponibilidad y acceso inmediato a
+              productos de consumo diario para mejorar la experiencia dentro de
+              empresas y espacios de alto trafico.
             </p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#empresas">
@@ -75,29 +75,80 @@
             </div>
           </div>
 
-          <div class="hero-photo-wrap reveal">
+          <div class="hero-photo-wrap productivity-stage reveal">
             <div class="status-pill">
               <span></span>
-              Maquina real
+              Servicio administrado
             </div>
-            <figure class="hero-photo">
-              <img src="assets/machine-angle.png" alt="Maquina vending real Snackeria" />
-              <figcaption>Maquina real operando en Republica Dominicana.</figcaption>
-            </figure>
+            <div class="productivity-visual" aria-label="Visual de conveniencia y productividad">
+              <div class="visual-header">
+                <img src="branding/logo-official-icon-transparent.png" alt="" />
+                <span>Snackeria Network</span>
+              </div>
+              <div class="visual-grid">
+                <article>
+                  <i data-lucide="building-2"></i>
+                  <strong>Empresa</strong>
+                </article>
+                <article>
+                  <i data-lucide="clock-3"></i>
+                  <strong>24/7</strong>
+                </article>
+                <article>
+                  <i data-lucide="cup-soda"></i>
+                  <strong>Consumo diario</strong>
+                </article>
+                <article>
+                  <i data-lucide="trending-up"></i>
+                  <strong>Productividad</strong>
+                </article>
+              </div>
+              <div class="visual-flow">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
             <div class="metric-card metric-one">
-              <i data-lucide="scan-qr-code"></i>
+              <i data-lucide="users"></i>
               <div>
-                <strong>QR e Instagram</strong>
-                <span>presencia fisica</span>
+                <strong>Mejor experiencia</strong>
+                <span>empleados y visitantes</span>
               </div>
             </div>
             <div class="metric-card metric-two">
-              <i data-lucide="badge-check"></i>
+              <i data-lucide="shield-check"></i>
               <div>
-                <strong>Branding aplicado</strong>
-                <span>lista para instalar</span>
+                <strong>Operacion segura</strong>
+                <span>sin carga operativa</span>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about section-pad compact" aria-labelledby="about-title">
+        <div class="about-grid">
+          <div class="reveal">
+            <span class="section-kicker">Quienes somos</span>
+            <h2 id="about-title">Soluciones inteligentes de conveniencia para espacios de alto trafico</h2>
+          </div>
+          <div class="about-copy reveal">
+            <p>
+              Snackeria es una empresa dominicana especializada en soluciones
+              inteligentes de conveniencia para oficinas, empresas, centros
+              educativos, gimnasios, clinicas y espacios de alto trafico.
+            </p>
+            <p>
+              Ayudamos a las organizaciones a ofrecer acceso rapido a snacks,
+              bebidas y productos de consumo diario mediante una operacion
+              vending moderna, segura y totalmente administrada.
+            </p>
+            <p>
+              Mas que instalar maquinas, creamos puntos de conveniencia que
+              mejoran la experiencia de empleados, clientes y visitantes,
+              contribuyendo a entornos mas comodos, eficientes y productivos.
+            </p>
           </div>
         </div>
       </section>
@@ -174,30 +225,44 @@
 
       <section class="machine-section section-pad" id="maquina" aria-labelledby="maquina-title">
         <div class="machine-real-grid">
-          <div class="machine-gallery reveal">
-            <img class="gallery-main" src="assets/machine-front.png" alt="Vista frontal de la maquina Snackeria" />
-            <div class="gallery-side">
-              <img src="assets/machine-side.png" alt="Vista lateral de la maquina Snackeria" />
-              <img src="assets/machine-qr.png" alt="QR e Instagram de la maquina Snackeria" />
+          <div class="solution-visual reveal" aria-label="Modelo operativo Snackeria">
+            <div class="solution-node center-node">
+              <img src="branding/logo-official-icon-transparent.png" alt="" />
+              <strong>Snackeria</strong>
+              <span>Operacion administrada</span>
+            </div>
+            <div class="solution-node node-one">
+              <i data-lucide="package-check"></i>
+              Inventario
+            </div>
+            <div class="solution-node node-two">
+              <i data-lucide="refresh-cw"></i>
+              Reposicion
+            </div>
+            <div class="solution-node node-three">
+              <i data-lucide="credit-card"></i>
+              Pagos
+            </div>
+            <div class="solution-node node-four">
+              <i data-lucide="headphones"></i>
+              Soporte
             </div>
           </div>
           <div class="machine-copy reveal">
-            <span class="section-kicker">Nuestra maquina</span>
-            <h2 id="maquina-title">Ya existe, ya tiene marca y esta lista para operar</h2>
+            <span class="section-kicker">Solucion administrada</span>
+            <h2 id="maquina-title">La maquina es el equipo. La conveniencia es el valor.</h2>
             <p>
-              Disenada para operar 24/7 con pagos digitales, monitoreo remoto y
-              reposicion programada. Es el activo principal de Snackeria: una
-              maquina fisica con branding, QR, Instagram y presencia real.
+              Implementamos puntos de conveniencia operados por Snackeria para
+              que las organizaciones no tengan que administrar inventario,
+              personal, reposicion ni mantenimiento.
             </p>
             <div class="feature-list">
-              <span><i data-lucide="layers-3"></i>Capacidad aproximada por ubicacion</span>
+              <span><i data-lucide="layers-3"></i>Capacidad segun ubicacion</span>
               <span><i data-lucide="monitor-dot"></i>Monitoreo remoto</span>
               <span><i data-lucide="credit-card"></i>Pagos digitales</span>
-              <span><i data-lucide="panel-top"></i>Pantalla tactil</span>
-              <span><i data-lucide="qr-code"></i>QR integrado</span>
               <span><i data-lucide="boxes"></i>Control de inventario</span>
-              <span><i data-lucide="lightbulb"></i>Iluminacion LED</span>
-              <span><i data-lucide="layout-grid"></i>Multiples productos</span>
+              <span><i data-lucide="wrench"></i>Mantenimiento incluido</span>
+              <span><i data-lucide="shield-check"></i>Operacion segura</span>
             </div>
           </div>
         </div>
@@ -234,8 +299,8 @@
 
       <section class="why section-pad compact" aria-labelledby="why-title">
         <div class="section-heading reveal">
-          <span class="section-kicker">Decision empresarial</span>
-          <h2 id="why-title">Por que una empresa instala Snackeria</h2>
+          <span class="section-kicker">Valor real</span>
+          <h2 id="why-title">Que aporta Snackeria</h2>
         </div>
         <div class="benefit-grid">
           <article class="benefit-card reveal">
@@ -244,7 +309,15 @@
           </article>
           <article class="benefit-card reveal">
             <i data-lucide="cup-soda"></i>
-            <h3>Acceso a snacks y bebidas</h3>
+            <h3>Acceso inmediato a snacks y bebidas</h3>
+          </article>
+          <article class="benefit-card reveal">
+            <i data-lucide="route-off"></i>
+            <h3>Menos desplazamientos fuera de las instalaciones</h3>
+          </article>
+          <article class="benefit-card reveal">
+            <i data-lucide="timer-reset"></i>
+            <h3>Mayor aprovechamiento de los tiempos de descanso</h3>
           </article>
           <article class="benefit-card reveal">
             <i data-lucide="alarm-clock"></i>
@@ -259,9 +332,21 @@
             <h3>Sin inversion inicial</h3>
           </article>
           <article class="benefit-card reveal">
-            <i data-lucide="wrench"></i>
-            <h3>Nosotros operamos todo</h3>
+            <i data-lucide="shield-check"></i>
+            <h3>Operacion segura y controlada</h3>
           </article>
+        </div>
+      </section>
+
+      <section class="vision section-pad compact" aria-labelledby="vision-title">
+        <div class="vision-card reveal">
+          <span class="section-kicker">Vision</span>
+          <h2 id="vision-title">Transformar espacios comunes en entornos mas comodos, productivos y conectados</h2>
+          <p>
+            Queremos ser la empresa lider en soluciones de vending inteligente
+            en Republica Dominicana, agregando valor real a las organizaciones
+            y a las personas que utilizan sus instalaciones diariamente.
+          </p>
         </div>
       </section>
 
@@ -530,7 +615,7 @@
           </details>
           <details>
             <summary>Tiene costo para mi empresa?</summary>
-            <p>La evaluacion inicial es gratuita. La instalacion y condiciones operativas estan sujetas al potencial de consumo, acceso electrico, seguridad y volumen esperado.</p>
+            <p>No necesariamente. Snackeria instala, abastece y opera las maquinas sin que la empresa tenga que realizar una inversion inicial. Dependiendo de la ubicacion y del acuerdo comercial, podemos trabajar mediante alquiler de espacio, participacion por consumo o beneficio sin costo para empleados y visitantes. Cada instalacion es evaluada de forma individual.</p>
           </details>
           <details>
             <summary>Que tipos de productos venden?</summary>
@@ -556,7 +641,7 @@
         </div>
         <div class="footer-links">
           <a href="#inicio">Inicio</a>
-          <a href="#maquina">Nuestra maquina</a>
+          <a href="#maquina">Solucion</a>
           <a href="#ubicaciones">Ubicaciones</a>
           <a href="#empresas">Para Empresas</a>
           <a href="soporte/">Soporte</a>
@@ -573,6 +658,6 @@
     </footer>
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-    <script src="script.js?v=9"></script>
+    <script src="script.js?v=10"></script>
   </body>
 </html>
