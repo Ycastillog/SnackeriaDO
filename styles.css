@@ -996,8 +996,8 @@ select:focus {
   height: 92px;
   object-fit: contain;
   object-position: center;
-  border-radius: 8px;
-  background: var(--white);
+  border-radius: 0;
+  background: transparent;
 }
 
 .footer p {
