@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Portal de incidencias Snackeria para reportar problemas con maquinas vending en Republica Dominicana."
+    />
+    <title>Soporte Snackeria | Portal de incidencias</title>
+    <link rel="icon" href="../branding/logo-official-icon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css?v=6" />
+  </head>
+  <body>
+    <header class="site-header" id="inicio">
+      <nav class="nav" aria-label="Navegacion principal">
+        <a class="brand" href="../" aria-label="Snackeria inicio">
+          <img src="../branding/logo-official-primary.png" alt="Logo Snackeria" />
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+          <i data-lucide="menu"></i>
+        </button>
+        <div class="nav-links">
+          <a href="../#maquina">Nuestra maquina</a>
+          <a href="../#productos">Productos</a>
+          <a href="../#ubicaciones">Ubicaciones</a>
+          <a href="../#empresas">Para Empresas</a>
+          <a href="./">Soporte</a>
+          <a class="nav-cta" href="../#empresas">Solicitar maquina</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="portal-hero section-pad" aria-labelledby="portal-title">
+        <div class="portal-grid">
+          <div class="reveal">
+            <span class="section-kicker">Portal de incidencias</span>
+            <h1 id="portal-title">Soporte Snackeria</h1>
+            <p>
+              Reporta cualquier inconveniente con una maquina Snackeria. El
+              reporte se guarda localmente y se prepara para enviarse
+              directamente a nuestro equipo de soporte local.
+            </p>
+            <div class="badges">
+              <span><i data-lucide="package-x"></i>No entrego producto</span>
+              <span><i data-lucide="receipt"></i>Cobro duplicado</span>
+              <span><i data-lucide="badge-alert"></i>Producto defectuoso</span>
+              <span><i data-lucide="undo-2"></i>Reembolso</span>
+              <span><i data-lucide="messages-square"></i>Otro</span>
+            </div>
+            <figure class="portal-photo">
+              <img src="../assets/machine-qr.png" alt="QR de soporte e Instagram de Snackeria" />
+            </figure>
+          </div>
+
+          <form
+            class="portal-card reveal"
+            data-mail-form
+            data-subject="Nueva incidencia Snackeria"
+            data-storage-key="snackeriaIncidencias"
+            data-record-type="incidencia"
+          >
+            <div class="form-intro">
+              <span>Soporte local</span>
+              <h3>Cuentanos que ocurrio.</h3>
+              <p>
+                Incluye ubicacion, producto, fecha y el tipo de incidencia para
+                poder dar seguimiento rapidamente.
+              </p>
+            </div>
+
+            <div class="issue-options" aria-label="Tipo de incidencia">
+              <label class="issue-option">
+                <input type="radio" name="Tipo de incidencia" value="No entrego producto" required />
+                <span>No entrego producto</span>
+              </label>
+              <label class="issue-option">
+                <input type="radio" name="Tipo de incidencia" value="Cobro duplicado" />
+                <span>Cobro duplicado</span>
+              </label>
+              <label class="issue-option">
+                <input type="radio" name="Tipo de incidencia" value="Producto defectuoso" />
+                <span>Producto defectuoso</span>
+              </label>
+              <label class="issue-option">
+                <input type="radio" name="Tipo de incidencia" value="Reembolso" />
+                <span>Reembolso</span>
+              </label>
+              <label class="issue-option">
+                <input type="radio" name="Tipo de incidencia" value="Otro" />
+                <span>Otro</span>
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label>
+                Nombre
+                <input name="Nombre" required autocomplete="name" />
+              </label>
+              <label>
+                Correo
+                <input name="Correo" type="email" required autocomplete="email" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                Telefono
+                <input name="Telefono" type="tel" autocomplete="tel" />
+              </label>
+              <label>
+                Fecha
+                <input name="Fecha" type="date" />
+              </label>
+            </div>
+            <label>
+              Ubicacion de la maquina
+              <input name="Ubicacion de la maquina" required />
+            </label>
+            <label>
+              Producto
+              <input name="Producto" />
+            </label>
+            <label>
+              Detalles del problema
+              <textarea name="Detalles del problema" rows="5" required></textarea>
+            </label>
+            <button class="btn btn-primary form-submit" type="submit">
+              <i data-lucide="send"></i>
+              Enviar a soporte
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div>
+          <img src="../branding/logo-official-primary.png" alt="Logo Snackeria" />
+          <p>Red inteligente de vending en Republica Dominicana.</p>
+        </div>
+        <div class="footer-links">
+          <a href="../">Inicio</a>
+          <a href="../#maquina">Nuestra maquina</a>
+          <a href="../#productos">Productos</a>
+          <a href="../#ubicaciones">Ubicaciones</a>
+          <a href="../#empresas">Para Empresas</a>
+        </div>
+        <div class="footer-contact">
+          <a href="mailto:snackeriado@lps-company.com">snackeriado@lps-company.com</a>
+          <a href="https://www.instagram.com/snackeriado" target="_blank" rel="noreferrer">@snackeriado</a>
+          <a href="#whatsapp-pendiente" data-whatsapp-link>WhatsApp: por configurar</a>
+          <span>© 2026 Snackeria</span>
+          <span>Operado por LPS Company Group</span>
+          <span>Desarrollo web por YC Systems</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="../script.js?v=6"></script>
+  </body>
+</html>

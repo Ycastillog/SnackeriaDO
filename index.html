@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Instalacion y operacion de maquinas vending inteligentes para empresas, universidades, hospitales y gimnasios en Republica Dominicana."
+    />
+    <title>Snackeria | Maquinas vending inteligentes en Republica Dominicana</title>
+    <link rel="icon" href="branding/logo-official-icon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=6" />
+  </head>
+  <body>
+    <header class="site-header" id="inicio">
+      <nav class="nav" aria-label="Navegacion principal">
+        <a class="brand" href="#inicio" aria-label="Snackeria inicio">
+          <img src="branding/logo-official-primary.png" alt="Logo Snackeria" />
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+          <i data-lucide="menu"></i>
+        </button>
+        <div class="nav-links">
+          <a href="#maquina">Nuestra maquina</a>
+          <a href="#productos">Productos</a>
+          <a href="#ubicaciones">Ubicaciones</a>
+          <a href="#empresas">Para Empresas</a>
+          <a href="soporte/">Soporte</a>
+          <a class="nav-cta" href="#empresas">Solicitar maquina</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section-pad" aria-labelledby="hero-title">
+        <div class="hero-grid">
+          <div class="hero-copy reveal">
+            <div class="eyebrow">
+              <span></span>
+              Red inteligente de vending
+            </div>
+            <h1 id="hero-title">Tu antojo, ahora.</h1>
+            <p>
+              Maquinas vending inteligentes para empresas, universidades,
+              gimnasios y espacios comerciales.
+            </p>
+            <p class="hero-support">
+              Operamos maquinas vending para que tu empresa ofrezca conveniencia
+              sin administrar inventario, personal ni mantenimiento.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#empresas">
+                <i data-lucide="send"></i>
+                Solicitar una maquina
+              </a>
+              <a class="btn btn-secondary" href="#whatsapp-pendiente" data-whatsapp-link>
+                <i data-lucide="message-circle"></i>
+                WhatsApp
+              </a>
+            </div>
+            <div class="badges" aria-label="Caracteristicas principales">
+              <span><i data-lucide="clock-3"></i>Disponible 24/7</span>
+              <span><i data-lucide="credit-card"></i>Pago digital</span>
+              <span><i data-lucide="refresh-cw"></i>Reposicion continua</span>
+              <span><i data-lucide="headphones"></i>Soporte local</span>
+            </div>
+          </div>
+
+          <div class="hero-photo-wrap reveal">
+            <div class="status-pill">
+              <span></span>
+              Maquina real
+            </div>
+            <figure class="hero-photo">
+              <img src="assets/machine-angle.png" alt="Maquina vending real Snackeria" />
+              <figcaption>Maquina real operando en Republica Dominicana.</figcaption>
+            </figure>
+            <div class="metric-card metric-one">
+              <i data-lucide="scan-qr-code"></i>
+              <div>
+                <strong>QR e Instagram</strong>
+                <span>presencia fisica</span>
+              </div>
+            </div>
+            <div class="metric-card metric-two">
+              <i data-lucide="badge-check"></i>
+              <div>
+                <strong>Branding aplicado</strong>
+                <span>lista para instalar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="proof-band" aria-label="Metricas operativas">
+        <div class="proof-grid reveal">
+          <article>
+            <i data-lucide="clock-3"></i>
+            <strong>Operacion 24/7</strong>
+            <span>servicio continuo</span>
+          </article>
+          <article>
+            <i data-lucide="credit-card"></i>
+            <strong>Pagos digitales</strong>
+            <span>compra rapida</span>
+          </article>
+          <article>
+            <i data-lucide="package-check"></i>
+            <strong>Reposicion continua</strong>
+            <span>inventario atendido</span>
+          </article>
+          <article>
+            <i data-lucide="map-pin-check"></i>
+            <strong>Soporte local</strong>
+            <span>Republica Dominicana</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="products section-pad compact" id="productos" aria-labelledby="productos-title">
+        <div class="section-heading reveal">
+          <span class="section-kicker">Nuestros productos</span>
+          <h2 id="productos-title">Catalogo visual para espacios de alto consumo</h2>
+          <p>
+            Seleccionamos productos segun el perfil de cada ubicacion. No es
+            una tienda online: es abastecimiento inteligente para maquinas reales.
+          </p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card reveal">
+            <i data-lucide="cup-soda"></i>
+            <h3>Bebidas</h3>
+          </article>
+          <article class="product-card reveal">
+            <i data-lucide="glass-water"></i>
+            <h3>Jugos</h3>
+          </article>
+          <article class="product-card reveal">
+            <i data-lucide="droplets"></i>
+            <h3>Agua</h3>
+          </article>
+          <article class="product-card reveal">
+            <i data-lucide="zap"></i>
+            <h3>Energizantes</h3>
+          </article>
+          <article class="product-card reveal">
+            <i data-lucide="cookie"></i>
+            <h3>Galletas</h3>
+          </article>
+          <article class="product-card reveal">
+            <i data-lucide="candy"></i>
+            <h3>Chocolates</h3>
+          </article>
+          <article class="product-card reveal">
+            <i data-lucide="package"></i>
+            <h3>Snacks</h3>
+          </article>
+          <article class="product-card reveal">
+            <i data-lucide="leaf"></i>
+            <h3>Productos saludables</h3>
+          </article>
+        </div>
+      </section>
+
+      <section class="machine-section section-pad" id="maquina" aria-labelledby="maquina-title">
+        <div class="machine-real-grid">
+          <div class="machine-gallery reveal">
+            <img class="gallery-main" src="assets/machine-front.png" alt="Vista frontal de la maquina Snackeria" />
+            <div class="gallery-side">
+              <img src="assets/machine-side.png" alt="Vista lateral de la maquina Snackeria" />
+              <img src="assets/machine-qr.png" alt="QR e Instagram de la maquina Snackeria" />
+            </div>
+          </div>
+          <div class="machine-copy reveal">
+            <span class="section-kicker">Nuestra maquina</span>
+            <h2 id="maquina-title">Ya existe, ya tiene marca y esta lista para operar</h2>
+            <p>
+              Disenada para operar 24/7 con pagos digitales, monitoreo remoto y
+              reposicion programada. Es el activo principal de Snackeria: una
+              maquina fisica con branding, QR, Instagram y presencia real.
+            </p>
+            <div class="feature-list">
+              <span><i data-lucide="layers-3"></i>Capacidad aproximada por ubicacion</span>
+              <span><i data-lucide="monitor-dot"></i>Monitoreo remoto</span>
+              <span><i data-lucide="credit-card"></i>Pagos digitales</span>
+              <span><i data-lucide="panel-top"></i>Pantalla tactil</span>
+              <span><i data-lucide="qr-code"></i>QR integrado</span>
+              <span><i data-lucide="boxes"></i>Control de inventario</span>
+              <span><i data-lucide="lightbulb"></i>Iluminacion LED</span>
+              <span><i data-lucide="layout-grid"></i>Multiples productos</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad compact" aria-labelledby="funciona-title">
+        <div class="section-heading reveal">
+          <span class="section-kicker">Como funciona</span>
+          <h2 id="funciona-title">Compra simple en cuatro pasos</h2>
+        </div>
+        <div class="steps">
+          <article class="step-card reveal">
+            <i data-lucide="scan-line"></i>
+            <span>01</span>
+            <h3>Elige tu producto</h3>
+          </article>
+          <article class="step-card reveal">
+            <i data-lucide="wallet-cards"></i>
+            <span>02</span>
+            <h3>Paga</h3>
+          </article>
+          <article class="step-card reveal">
+            <i data-lucide="shopping-bag"></i>
+            <span>03</span>
+            <h3>Retira tu compra</h3>
+          </article>
+          <article class="step-card reveal">
+            <i data-lucide="sparkles"></i>
+            <span>04</span>
+            <h3>Disfruta</h3>
+          </article>
+        </div>
+      </section>
+
+      <section class="why section-pad compact" aria-labelledby="why-title">
+        <div class="section-heading reveal">
+          <span class="section-kicker">Decision empresarial</span>
+          <h2 id="why-title">Por que una empresa instala Snackeria</h2>
+        </div>
+        <div class="benefit-grid">
+          <article class="benefit-card reveal">
+            <i data-lucide="smile-plus"></i>
+            <h3>Mayor comodidad para empleados</h3>
+          </article>
+          <article class="benefit-card reveal">
+            <i data-lucide="cup-soda"></i>
+            <h3>Acceso a snacks y bebidas</h3>
+          </article>
+          <article class="benefit-card reveal">
+            <i data-lucide="alarm-clock"></i>
+            <h3>Disponible fuera del horario de cafeteria</h3>
+          </article>
+          <article class="benefit-card reveal">
+            <i data-lucide="building-2"></i>
+            <h3>Mejora la experiencia del visitante</h3>
+          </article>
+          <article class="benefit-card reveal">
+            <i data-lucide="badge-dollar-sign"></i>
+            <h3>Sin inversion inicial</h3>
+          </article>
+          <article class="benefit-card reveal">
+            <i data-lucide="wrench"></i>
+            <h3>Nosotros operamos todo</h3>
+          </article>
+        </div>
+      </section>
+
+      <section class="enterprise section-pad" id="empresas" aria-labelledby="empresas-title">
+        <div class="enterprise-grid">
+          <div class="enterprise-copy reveal">
+            <span class="section-kicker">Para empresas</span>
+            <h2 id="empresas-title">Lleva Snackeria a tu empresa</h2>
+            <p>
+              Instalamos y operamos maquinas vending inteligentes para mejorar
+              la experiencia de colaboradores y visitantes.
+            </p>
+            <div class="managed-list" aria-label="Nos encargamos de">
+              <span><i data-lucide="check"></i>Instalacion</span>
+              <span><i data-lucide="check"></i>Inventario</span>
+              <span><i data-lucide="check"></i>Reposicion</span>
+              <span><i data-lucide="check"></i>Mantenimiento</span>
+              <span><i data-lucide="check"></i>Soporte</span>
+            </div>
+          </div>
+          <form
+            class="form-panel form-featured reveal"
+            data-mail-form
+            data-subject="Nueva solicitud de instalacion"
+            data-storage-key="snackeriaLeads"
+            data-record-type="lead"
+          >
+            <div class="form-intro">
+              <span>Evaluacion gratuita</span>
+              <h3>Recibe una evaluacion gratuita de tu ubicacion.</h3>
+              <p>
+                Nuestro equipo revisara si tu empresa es apta para una
+                instalacion Snackeria.
+              </p>
+            </div>
+            <div class="form-row">
+              <label>
+                Nombre completo
+                <input name="Nombre completo" required autocomplete="name" />
+              </label>
+              <label>
+                Empresa
+                <input name="Empresa" required autocomplete="organization" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                Cargo
+                <input name="Cargo" autocomplete="organization-title" />
+              </label>
+              <label>
+                Correo corporativo
+                <input name="Correo corporativo" type="email" required autocomplete="email" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                Telefono
+                <input name="Telefono" type="tel" required autocomplete="tel" />
+              </label>
+              <label>
+                Tipo de establecimiento
+                <select name="Tipo de establecimiento" required>
+                  <option value="">Seleccionar</option>
+                  <option>Oficina</option>
+                  <option>Universidad</option>
+                  <option>Hospital</option>
+                  <option>Clinica</option>
+                  <option>Gimnasio</option>
+                  <option>Centro Comercial</option>
+                  <option>Fabrica</option>
+                  <option>Residencial</option>
+                  <option>Otro</option>
+                </select>
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                Cantidad de personas por dia
+                <select name="Cantidad de personas por dia" required>
+                  <option value="">Seleccionar</option>
+                  <option>Menos de 50</option>
+                  <option>50-150</option>
+                  <option>150-300</option>
+                  <option>300+</option>
+                </select>
+              </label>
+              <label>
+                Ciudad
+                <input name="Ciudad" required autocomplete="address-level2" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                Sector
+                <input name="Sector" required />
+              </label>
+              <label>
+                Existe vending actualmente?
+                <select name="Existe vending actualmente?" required>
+                  <option value="">Seleccionar</option>
+                  <option>Si</option>
+                  <option>No</option>
+                </select>
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                Horario de operacion
+                <select name="Horario de operacion" required>
+                  <option value="">Seleccionar</option>
+                  <option>24 horas</option>
+                  <option>Diurno</option>
+                  <option>Nocturno</option>
+                  <option>Mixto</option>
+                </select>
+              </label>
+              <label>
+                Quien utilizara principalmente la maquina?
+                <select name="Usuario principal" required>
+                  <option value="">Seleccionar</option>
+                  <option>Empleados</option>
+                  <option>Estudiantes</option>
+                  <option>Pacientes</option>
+                  <option>Visitantes</option>
+                  <option>Publico general</option>
+                </select>
+              </label>
+            </div>
+            <label>
+              Comentarios adicionales
+              <textarea name="Comentarios adicionales" rows="4"></textarea>
+            </label>
+            <button class="btn btn-primary form-submit" type="submit">
+              <i data-lucide="clipboard-check"></i>
+              Solicitar evaluacion gratuita
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <section class="section-pad compact" aria-labelledby="beneficios-title">
+        <div class="section-heading reveal">
+          <span class="section-kicker">Beneficios</span>
+          <h2 id="beneficios-title">Conveniencia operada de punta a punta</h2>
+        </div>
+        <div class="benefit-grid">
+          <article class="benefit-card reveal">
+            <i data-lucide="clock"></i>
+            <h3>Disponible 24/7</h3>
+          </article>
+          <article class="benefit-card reveal">
+            <i data-lucide="timer-off"></i>
+            <h3>Sin filas</h3>
+          </article>
+          <article class="benefit-card reveal">
+            <i data-lucide="credit-card"></i>
+            <h3>Pagos digitales</h3>
+          </article>
+          <article class="benefit-card reveal">
+            <i data-lucide="rotate-cw-square"></i>
+            <h3>Reposicion constante</h3>
+          </article>
+          <article class="benefit-card reveal">
+            <i data-lucide="rocket"></i>
+            <h3>Instalacion rapida</h3>
+          </article>
+          <article class="benefit-card reveal">
+            <i data-lucide="shield-check"></i>
+            <h3>Sin gestion para la empresa</h3>
+          </article>
+          <article class="benefit-card reveal">
+            <i data-lucide="badge-dollar-sign"></i>
+            <h3>Sin inversion inicial*</h3>
+          </article>
+          <article class="benefit-card reveal">
+            <i data-lucide="map-pin-check"></i>
+            <h3>Atencion local</h3>
+          </article>
+          <article class="benefit-card reveal">
+            <i data-lucide="hard-hat"></i>
+            <h3>Instalacion profesional</h3>
+          </article>
+        </div>
+        <p class="fine-print reveal">*Sujeto a evaluacion de ubicacion.</p>
+      </section>
+
+      <section class="locations section-pad" id="ubicaciones" aria-labelledby="ubicaciones-title">
+        <div class="section-heading reveal">
+          <span class="section-kicker">Tipos de ubicacion</span>
+          <h2 id="ubicaciones-title">Snackeria se adapta a espacios de alto movimiento</h2>
+          <p>Estamos construyendo una red de ubicaciones para llevar conveniencia 24/7 a espacios con alto flujo de personas.</p>
+        </div>
+        <div class="network-map reveal" aria-label="Mapa visual de cobertura Snackeria">
+          <div class="map-panel">
+            <div class="map-grid" aria-hidden="true">
+              <span class="map-route route-one"></span>
+              <span class="map-route route-two"></span>
+              <span class="map-marker marker-one"><i data-lucide="graduation-cap"></i></span>
+              <span class="map-marker marker-two"><i data-lucide="hospital"></i></span>
+              <span class="map-marker marker-three"><i data-lucide="briefcase-business"></i></span>
+              <span class="map-marker marker-four"><i data-lucide="dumbbell"></i></span>
+              <span class="map-marker marker-five"><i data-lucide="store"></i></span>
+            </div>
+          </div>
+          <div class="map-copy">
+            <span class="section-kicker">Cobertura</span>
+            <h3>Disponible para instalacion en toda Republica Dominicana.</h3>
+            <p>El objetivo de esta red es conectar universidades, hospitales, oficinas, gimnasios y centros comerciales con maquinas operadas por Snackeria.</p>
+            <div class="availability-badge">
+              <i data-lucide="badge-check"></i>
+              Proximamente nuevas ubicaciones publicas.
+            </div>
+          </div>
+        </div>
+        <div class="location-cards">
+          <article class="location-card reveal">
+            <div class="location-icon"><i data-lucide="briefcase-business"></i></div>
+            <h3>Oficinas</h3>
+          </article>
+          <article class="location-card reveal">
+            <div class="location-icon"><i data-lucide="graduation-cap"></i></div>
+            <h3>Universidades</h3>
+          </article>
+          <article class="location-card reveal">
+            <div class="location-icon"><i data-lucide="hospital"></i></div>
+            <h3>Hospitales</h3>
+          </article>
+          <article class="location-card reveal">
+            <div class="location-icon"><i data-lucide="dumbbell"></i></div>
+            <h3>Gimnasios</h3>
+          </article>
+          <article class="location-card reveal">
+            <div class="location-icon"><i data-lucide="store"></i></div>
+            <h3>Centros comerciales</h3>
+          </article>
+        </div>
+      </section>
+
+      <section class="support-cta section-pad compact" id="soporte" aria-labelledby="soporte-title">
+        <div class="support-card reveal">
+          <div>
+            <span class="section-kicker">Soporte</span>
+            <h2 id="soporte-title">Portal de incidencias Snackeria</h2>
+            <p>
+              Reporta problemas de entrega, cobros, productos defectuosos o
+              solicitudes de devolucion desde el portal dedicado.
+            </p>
+          </div>
+          <a class="btn btn-primary" href="soporte/">
+            <i data-lucide="life-buoy"></i>
+            Abrir soporte
+          </a>
+        </div>
+      </section>
+
+      <section class="faq section-pad compact" aria-labelledby="faq-title">
+        <div class="section-heading reveal">
+          <span class="section-kicker">FAQ</span>
+          <h2 id="faq-title">Preguntas frecuentes</h2>
+        </div>
+        <div class="faq-list reveal">
+          <details>
+            <summary>Como solicito una maquina?</summary>
+            <p>Completa el formulario de evaluacion. Revisamos flujo de personas, tipo de establecimiento, horario y ubicacion para determinar si la instalacion es viable.</p>
+          </details>
+          <details>
+            <summary>Tiene costo para mi empresa?</summary>
+            <p>La evaluacion inicial es gratuita. La instalacion y condiciones operativas estan sujetas al potencial de consumo, acceso electrico, seguridad y volumen esperado.</p>
+          </details>
+          <details>
+            <summary>Que tipos de productos venden?</summary>
+            <p>Bebidas, agua, jugos, energizantes, galletas, chocolates, snacks y opciones saludables. El mix se ajusta segun el publico de cada ubicacion.</p>
+          </details>
+          <details>
+            <summary>Como reporto una incidencia?</summary>
+            <p>Entra al portal de soporte, selecciona el tipo de incidencia e incluye ubicacion, producto, fecha y detalle del problema. El reporte se prepara para enviarse a nuestro correo de soporte.</p>
+          </details>
+          <details>
+            <summary>Aceptan pagos digitales?</summary>
+            <p>Si. Snackeria esta orientada a pagos digitales, QR y experiencias de compra rapidas, segun la configuracion disponible en cada maquina.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div>
+          <img src="branding/logo-official-primary.png" alt="Logo Snackeria" />
+          <p>Red inteligente de vending en Republica Dominicana.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#inicio">Inicio</a>
+          <a href="#maquina">Nuestra maquina</a>
+          <a href="#ubicaciones">Ubicaciones</a>
+          <a href="#empresas">Para Empresas</a>
+          <a href="soporte/">Soporte</a>
+        </div>
+        <div class="footer-contact">
+          <a href="mailto:snackeriado@lps-company.com">snackeriado@lps-company.com</a>
+          <a href="https://www.instagram.com/snackeriado" target="_blank" rel="noreferrer">@snackeriado</a>
+          <a href="#whatsapp-pendiente" data-whatsapp-link>WhatsApp: por configurar</a>
+          <span>© 2026 Snackeria</span>
+          <span>Operado por LPS Company Group</span>
+          <span>Desarrollo web por YC Systems</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="script.js?v=6"></script>
+  </body>
+</html>
