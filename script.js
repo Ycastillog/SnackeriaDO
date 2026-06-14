@@ -22,17 +22,13 @@ if (navToggle && navLinks) {
 
 document.querySelectorAll("[data-whatsapp-link]").forEach((link) => {
   if (whatsappNumber) {
+    link.hidden = false;
     link.href = `https://wa.me/${whatsappNumber}`;
     link.target = "_blank";
     link.rel = "noreferrer";
     link.textContent = link.textContent.replace("por configurar", whatsappNumber);
   } else {
-    link.setAttribute("aria-disabled", "true");
-    link.title = "Agrega el numero de WhatsApp en script.js";
-    link.addEventListener("click", (event) => {
-      event.preventDefault();
-      document.querySelector("#empresas")?.scrollIntoView({ behavior: "smooth" });
-    });
+    link.hidden = true;
   }
 });
 
@@ -70,6 +66,14 @@ document.querySelectorAll("[data-mail-form]").forEach((form) => {
     const storageKey = form.dataset.storageKey || "snackeriaContactos";
     saveRecord(storageKey, record);
 
+    const status = form.querySelector(".form-status");
+    if (status) {
+      status.hidden = false;
+      status.textContent = recordType === "incidencia"
+        ? "Incidencia guardada. Preparando correo de soporte..."
+        : "Solicitud guardada. Preparando correo para Snackeria...";
+    }
+
     const lines = [
       `ID: ${record.id}`,
       `Fecha: ${record.createdAt}`,
@@ -80,7 +84,9 @@ document.querySelectorAll("[data-mail-form]").forEach((form) => {
 
     const subject = form.dataset.subject || "Contacto Snackeria";
     const mailto = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
-    window.location.href = mailto;
+    window.setTimeout(() => {
+      window.location.href = mailto;
+    }, 450);
   });
 });
 

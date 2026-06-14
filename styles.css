@@ -574,6 +574,40 @@ p {
   margin: 0;
 }
 
+.about-copy blockquote {
+  margin: 4px 0 0;
+  border-left: 4px solid var(--yellow);
+  padding: 12px 0 12px 16px;
+  color: var(--navy);
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.pillar-grid {
+  width: min(1180px, 100%);
+  margin: 34px auto 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.pillar-grid article {
+  min-height: 140px;
+  display: grid;
+  align-content: space-between;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: var(--soft-shadow);
+}
+
+.pillar-grid svg {
+  width: 32px;
+  height: 32px;
+  color: var(--blue);
+}
+
 .solution-visual {
   position: relative;
   min-height: 520px;
@@ -651,6 +685,32 @@ p {
 .node-four {
   right: 10%;
   bottom: 16%;
+}
+
+.infrastructure {
+  background: var(--white);
+}
+
+.infra-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(360px, 1fr);
+  gap: 42px;
+  align-items: center;
+}
+
+.infra-photo {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--soft-shadow);
+}
+
+.infra-photo img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  object-position: 50% 32%;
 }
 
 .machine-gallery {
@@ -911,6 +971,17 @@ select:focus {
   margin-top: 4px;
 }
 
+.form-status {
+  margin: 12px 0 0;
+  border: 1px solid rgba(18, 150, 243, 0.16);
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: var(--navy);
+  background: rgba(18, 150, 243, 0.08);
+  font-size: 0.92rem;
+  font-weight: 900;
+}
+
 .benefit-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -1153,6 +1224,10 @@ select:focus {
   margin-bottom: 0;
 }
 
+.final-cta {
+  background: var(--white);
+}
+
 .faq-list {
   width: min(850px, 100%);
   margin: 0 auto;
@@ -1326,6 +1401,10 @@ select:focus {
   transform: translateY(0);
 }
 
+[hidden] {
+  display: none !important;
+}
+
 @media (max-width: 1100px) {
   .nav-links {
     gap: 14px;
@@ -1380,7 +1459,8 @@ select:focus {
   .machine-real-grid,
   .portal-grid,
   .network-map,
-  .about-grid {
+  .about-grid,
+  .infra-grid {
     grid-template-columns: 1fr;
     gap: 36px;
   }
@@ -1397,7 +1477,8 @@ select:focus {
   .proof-grid,
   .steps,
   .benefit-grid,
-  .product-grid {
+  .product-grid,
+  .pillar-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1495,6 +1576,7 @@ select:focus {
   .steps,
   .benefit-grid,
   .product-grid,
+  .pillar-grid,
   .form-row,
   .location-cards,
   .issue-options {
@@ -1515,7 +1597,8 @@ select:focus {
   }
 
   .gallery-side img,
-  .portal-photo img {
+  .portal-photo img,
+  .infra-photo img {
     height: 260px;
   }
 

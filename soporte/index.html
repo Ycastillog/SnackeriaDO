@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Portal de incidencias Snackeria para reportar problemas con maquinas vending en Republica Dominicana."
+      content="Portal de incidencias Snackeria para reportar problemas en puntos de conveniencia administrados en Republica Dominicana."
     />
     <title>Soporte Snackeria | Portal de incidencias</title>
     <link rel="icon" href="../branding/logo-official-icon-transparent.png" type="image/png" />
@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles.css?v=10" />
+    <link rel="stylesheet" href="../styles.css?v=11" />
   </head>
   <body>
     <header class="site-header" id="inicio">
@@ -52,7 +52,7 @@
               <span><i data-lucide="package-x"></i>No entrego producto</span>
               <span><i data-lucide="receipt"></i>Cobro duplicado</span>
               <span><i data-lucide="badge-alert"></i>Producto defectuoso</span>
-              <span><i data-lucide="undo-2"></i>Reembolso</span>
+              <span><i data-lucide="undo-2"></i>Solicitar reembolso</span>
               <span><i data-lucide="messages-square"></i>Otro</span>
             </div>
             <div class="support-visual" aria-label="Flujo de soporte Snackeria">
@@ -101,8 +101,8 @@
                 <span>Producto defectuoso</span>
               </label>
               <label class="issue-option">
-                <input type="radio" name="Tipo de incidencia" value="Reembolso" />
-                <span>Reembolso</span>
+                <input type="radio" name="Tipo de incidencia" value="Solicitar reembolso" />
+                <span>Solicitar reembolso</span>
               </label>
               <label class="issue-option">
                 <input type="radio" name="Tipo de incidencia" value="Otro" />
@@ -146,6 +146,7 @@
               <i data-lucide="send"></i>
               Enviar a soporte
             </button>
+            <p class="form-status" aria-live="polite" hidden></p>
           </form>
         </div>
       </section>
@@ -155,7 +156,7 @@
       <div class="footer-inner">
         <div>
           <img src="../branding/logo-official-primary-transparent.png" alt="Logo Snackeria" />
-          <p>Red inteligente de vending en Republica Dominicana.</p>
+          <p>Red inteligente de conveniencia en Republica Dominicana.</p>
         </div>
         <div class="footer-links">
           <a href="../">Inicio</a>
@@ -167,7 +168,6 @@
         <div class="footer-contact">
           <a href="mailto:snackeriado@lps-company.com">snackeriado@lps-company.com</a>
           <a href="https://www.instagram.com/snackeriado" target="_blank" rel="noreferrer">@snackeriado</a>
-          <a href="#whatsapp-pendiente" data-whatsapp-link>WhatsApp: por configurar</a>
           <span>© 2026 Snackeria</span>
           <span>Operado por LPS Company Group</span>
           <span>Desarrollo web por YC Systems</span>
@@ -176,6 +176,6 @@
     </footer>
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-    <script src="../script.js?v=10"></script>
+    <script src="../script.js?v=11"></script>
   </body>
 </html>
