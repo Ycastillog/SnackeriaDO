@@ -647,18 +647,20 @@ p {
 .center-node {
   left: 50%;
   top: 50%;
-  width: 210px;
-  min-height: 170px;
+  width: 240px;
+  min-height: 190px;
   display: grid;
+  align-content: center;
   justify-items: center;
+  gap: 8px;
   text-align: center;
   transform: translate(-50%, -50%);
   background: rgba(255, 255, 255, 0.92);
 }
 
 .center-node img {
-  width: 100px;
-  height: 82px;
+  width: 168px;
+  height: 96px;
   object-fit: contain;
 }
 
@@ -1526,13 +1528,14 @@ select:focus {
   }
 
   .center-node {
-    min-height: 150px;
+    min-height: 188px;
     order: -1;
+    padding: 18px;
   }
 
   .center-node img {
-    width: min(150px, 60%);
-    height: 86px;
+    width: min(210px, 76%);
+    height: 104px;
   }
 
   .solution-node {
@@ -1680,12 +1683,12 @@ select:focus {
   }
 
   .center-node {
-    min-height: 142px;
+    min-height: 184px;
   }
 
   .center-node img {
-    width: 136px;
-    height: 78px;
+    width: 190px;
+    height: 98px;
   }
 
   .portal-hero {
