@@ -1506,6 +1506,62 @@ select:focus {
     gap: 16px;
   }
 
+  .solution-visual {
+    min-height: auto;
+    display: grid;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .center-node,
+  .solution-node {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    transform: none;
+    width: auto;
+    margin: 0;
+  }
+
+  .center-node {
+    min-height: 150px;
+    order: -1;
+  }
+
+  .center-node img {
+    width: min(150px, 60%);
+    height: 86px;
+  }
+
+  .solution-node {
+    min-height: 60px;
+    justify-content: center;
+  }
+
+  .portal-hero {
+    padding-top: 56px;
+    padding-bottom: 42px;
+  }
+
+  .portal-grid {
+    gap: 24px;
+  }
+
+  .portal-card {
+    padding: 18px;
+  }
+
+  .issue-options {
+    grid-template-columns: 1fr;
+  }
+
+  .issue-option {
+    min-height: 58px;
+    padding: 14px;
+  }
+
   .support-card {
     align-items: stretch;
     flex-direction: column;
@@ -1620,23 +1676,24 @@ select:focus {
   }
 
   .solution-visual {
-    min-height: 620px;
-  }
-
-  .center-node,
-  .solution-node {
-    position: relative;
-    left: auto;
-    right: auto;
-    top: auto;
-    bottom: auto;
-    transform: none;
-    width: auto;
-    margin: 14px;
+    padding: 12px;
   }
 
   .center-node {
-    margin-top: 38px;
+    min-height: 142px;
+  }
+
+  .center-node img {
+    width: 136px;
+    height: 78px;
+  }
+
+  .portal-hero {
+    padding-top: 38px;
+  }
+
+  .support-visual div {
+    min-height: 104px;
   }
 
   .map-panel {
