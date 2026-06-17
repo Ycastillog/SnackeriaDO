@@ -195,12 +195,12 @@ h1 {
 
 .hero-title span {
   color: var(--navy);
-  font-size: clamp(3rem, 6.4vw, 6.2rem);
+  font-size: clamp(3rem, 5.15vw, 5rem);
 }
 
 .hero-title strong {
   color: var(--blue);
-  font-size: clamp(4.9rem, 11vw, 10.6rem);
+  font-size: clamp(4.9rem, 9.2vw, 8.2rem);
   letter-spacing: 0;
   text-shadow: 0 16px 42px rgba(18, 150, 243, 0.18);
 }
@@ -518,6 +518,110 @@ p {
 @media (min-width: 981px) {
   .productivity-stage {
     transform: translateY(clamp(58px, 8vh, 78px));
+  }
+}
+
+@media (min-width: 981px) and (max-width: 1320px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 1.03fr) minmax(360px, 0.82fr);
+    gap: clamp(34px, 5vw, 64px);
+  }
+
+  .hero-title span {
+    font-size: clamp(3.65rem, 5.2vw, 4.65rem);
+  }
+
+  .hero-title strong {
+    font-size: clamp(5.8rem, 9.3vw, 7.35rem);
+  }
+
+  .productivity-stage {
+    align-items: flex-end;
+    transform: translateY(clamp(34px, 6vh, 58px));
+  }
+
+  .productivity-visual {
+    width: min(430px, 100%);
+    padding: 20px;
+  }
+
+  .visual-header img {
+    width: 150px;
+    height: 84px;
+  }
+
+  .visual-grid article {
+    min-height: 118px;
+  }
+}
+
+@media (min-width: 981px) and (max-height: 700px) {
+  .hero {
+    min-height: auto;
+    align-items: start;
+    padding-top: 70px;
+    padding-bottom: 36px;
+  }
+
+  .hero-grid {
+    align-items: start;
+  }
+
+  .hero-title span {
+    font-size: clamp(3.2rem, 4.8vw, 4.25rem);
+  }
+
+  .hero-title strong {
+    font-size: clamp(5rem, 8.4vw, 6.5rem);
+  }
+
+  .hero-copy p {
+    font-size: clamp(1.05rem, 1.9vw, 1.22rem);
+  }
+
+  .hero-copy .hero-support {
+    font-size: 0.94rem;
+  }
+
+  .hero-actions {
+    margin: 22px 0 18px;
+  }
+
+  .badges span {
+    padding: 8px 11px;
+  }
+
+  .productivity-stage {
+    min-height: 520px;
+    transform: translateY(18px);
+  }
+
+  .productivity-visual {
+    width: min(430px, 100%);
+    padding: 16px;
+  }
+
+  .visual-header {
+    margin-bottom: 12px;
+  }
+
+  .visual-header img {
+    width: 138px;
+    height: 72px;
+  }
+
+  .visual-grid article {
+    min-height: 104px;
+    padding: 14px;
+  }
+
+  .visual-flow {
+    margin-top: 12px;
+  }
+
+  .productivity-stage .status-pill,
+  .productivity-stage .metric-card {
+    width: min(260px, 100%);
   }
 }
 
