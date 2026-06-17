@@ -498,13 +498,32 @@ p {
 }
 
 .metric-one {
-  left: -18px;
-  top: 8px;
+  right: 92px;
+  top: 112px;
 }
 
 .metric-two {
   right: -6px;
   bottom: 112px;
+}
+
+.productivity-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.productivity-stage .status-pill,
+.productivity-stage .metric-card {
+  position: relative;
+  left: auto;
+  right: auto;
+  top: auto;
+  bottom: auto;
+  width: min(280px, 100%);
+  justify-content: center;
 }
 
 .proof-band {
@@ -1584,13 +1603,13 @@ select:focus {
   }
 
   .metric-one {
-    left: 0;
-    top: 250px;
+    left: auto;
+    top: auto;
   }
 
   .metric-two {
-    right: 0;
-    bottom: 58px;
+    right: auto;
+    bottom: auto;
   }
 
   .proof-grid,
@@ -1744,18 +1763,30 @@ select:focus {
   }
 
   .status-pill {
-    top: 14px;
-    right: 6px;
+    top: auto;
+    right: auto;
   }
 
   .metric-one {
-    left: 0;
-    top: 256px;
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    width: 100%;
+    justify-content: center;
+    margin-top: 12px;
   }
 
   .metric-two {
-    right: 0;
-    bottom: 26px;
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
   }
 
   .proof-grid,
