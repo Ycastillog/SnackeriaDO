@@ -498,8 +498,8 @@ p {
 }
 
 .metric-one {
-  left: -6px;
-  top: 160px;
+  left: -18px;
+  top: 238px;
 }
 
 .metric-two {
@@ -1583,6 +1583,16 @@ select:focus {
     min-height: 560px;
   }
 
+  .metric-one {
+    left: 0;
+    top: 250px;
+  }
+
+  .metric-two {
+    right: 0;
+    bottom: 58px;
+  }
+
   .proof-grid,
   .steps,
   .benefit-grid,
@@ -1730,7 +1740,7 @@ select:focus {
 
   .metric-one {
     left: 0;
-    top: 112px;
+    top: 256px;
   }
 
   .metric-two {
