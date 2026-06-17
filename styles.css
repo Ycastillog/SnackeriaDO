@@ -515,6 +515,12 @@ p {
   gap: 12px;
 }
 
+@media (min-width: 981px) {
+  .productivity-stage {
+    margin-top: 80px;
+  }
+}
+
 .productivity-stage .status-pill,
 .productivity-stage .metric-card {
   position: relative;
