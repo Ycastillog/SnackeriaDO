@@ -757,7 +757,7 @@ p {
 .infra-hub {
   left: 50%;
   top: 50%;
-  width: min(250px, 62%);
+  width: min(290px, 68%);
   min-height: 172px;
   display: grid;
   place-items: center;
@@ -768,8 +768,8 @@ p {
 }
 
 .infra-hub img {
-  width: 96px;
-  height: 78px;
+  width: 178px;
+  height: 96px;
   object-fit: contain;
 }
 
@@ -1843,6 +1843,11 @@ select:focus {
 
   .infra-hub {
     min-height: 152px;
+  }
+
+  .infra-hub img {
+    width: 156px;
+    height: 84px;
   }
 
   .infra-signal {
