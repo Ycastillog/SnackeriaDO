@@ -517,7 +517,7 @@ p {
 
 @media (min-width: 981px) {
   .productivity-stage {
-    margin-top: 80px;
+    transform: translateY(clamp(58px, 8vh, 78px));
   }
 }
 
