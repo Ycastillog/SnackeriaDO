@@ -393,8 +393,8 @@ p {
 }
 
 .visual-header img {
-  width: 92px;
-  height: 64px;
+  width: 176px;
+  height: 96px;
   object-fit: contain;
 }
 
@@ -499,7 +499,7 @@ p {
 
 .metric-one {
   left: -18px;
-  top: 238px;
+  top: 8px;
 }
 
 .metric-two {
@@ -1727,6 +1727,16 @@ select:focus {
 
   .hero-photo-wrap {
     min-height: 510px;
+  }
+
+  .visual-header {
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .visual-header img {
+    width: 142px;
+    height: 78px;
   }
 
   .hero-photo img {
