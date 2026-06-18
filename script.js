@@ -21,6 +21,24 @@ if (navToggle && navLinks) {
   });
 }
 
+document.querySelectorAll("[data-home-link]").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const linkUrl = new URL(link.getAttribute("href"), window.location.href);
+    const isSamePageHome =
+      linkUrl.origin === window.location.origin &&
+      linkUrl.pathname === window.location.pathname &&
+      linkUrl.hash === "#inicio";
+
+    if (!isSamePageHome) {
+      return;
+    }
+
+    event.preventDefault();
+    history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
+
 document.querySelectorAll("[data-whatsapp-link]").forEach((link) => {
   if (whatsappNumber) {
     link.hidden = false;
