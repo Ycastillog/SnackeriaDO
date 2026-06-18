@@ -70,14 +70,73 @@ function findReplyEmail(values) {
   return emailField ? emailField[1] : "";
 }
 
+function findValue(values, fieldName) {
+  const match = values.find(([key]) => key.toLowerCase() === fieldName.toLowerCase());
+  return match ? match[1] : "";
+}
+
+function buildEmailSubject(values, record) {
+  if (record.type === "incidencia") {
+    const issueType = findValue(values, "Tipo de incidencia") || "Reporte de soporte";
+    const location = findValue(values, "Ubicación del punto Snackeria") || "sin ubicación";
+    return `[SNACKERIA SOPORTE] ${issueType} - ${location}`;
+  }
+
+  if (record.type === "lead") {
+    const company = findValue(values, "Empresa") || "empresa";
+    const city = findValue(values, "Ciudad") || "sin ciudad";
+    return `[SNACKERIA EMPRESAS] Nueva solicitud - ${company} - ${city}`;
+  }
+
+  return "[SNACKERIA] Nuevo formulario recibido";
+}
+
+function buildInternalSummary(values, record) {
+  const valueMap = Object.fromEntries(values);
+
+  if (record.type === "incidencia") {
+    return [
+      "SNACKERIA - PORTAL DE SOPORTE",
+      `Tipo de incidencia: ${valueMap["Tipo de incidencia"] || "No especificado"}`,
+      `Cliente: ${valueMap.Nombre || "No especificado"}`,
+      `Teléfono: ${valueMap["Teléfono"] || "No especificado"}`,
+      `Correo: ${valueMap.Correo || "No especificado"}`,
+      `Ubicación: ${valueMap["Ubicación del punto Snackeria"] || "No especificada"}`,
+      `Producto: ${valueMap.Producto || "No especificado"}`,
+      `Fecha indicada: ${valueMap.Fecha || "No especificada"}`,
+      `Detalle: ${valueMap["Detalles del problema"] || "No especificado"}`,
+    ].join("\n");
+  }
+
+  return [
+    "SNACKERIA - SOLICITUD EMPRESARIAL",
+    `Empresa: ${valueMap.Empresa || "No especificada"}`,
+    `Contacto: ${valueMap["Nombre completo"] || "No especificado"}`,
+    `Cargo: ${valueMap.Cargo || "No especificado"}`,
+    `Correo: ${valueMap["Correo corporativo"] || "No especificado"}`,
+    `Teléfono: ${valueMap["Teléfono"] || "No especificado"}`,
+    `Ciudad: ${valueMap.Ciudad || "No especificada"}`,
+    `Sector: ${valueMap.Sector || "No especificado"}`,
+    `Tipo de establecimiento: ${valueMap["Tipo de establecimiento"] || "No especificado"}`,
+    `Personas por día: ${valueMap["Cantidad de personas por día"] || "No especificado"}`,
+  ].join("\n");
+}
+
 async function sendFormToEmail({ values, subject, record }) {
   const payload = new FormData();
-  payload.append("_subject", subject);
+  const finalSubject = buildEmailSubject(values, record) || subject;
+
+  payload.append("_subject", finalSubject);
   payload.append("_template", "table");
   payload.append("_captcha", "false");
-  payload.append("ID", record.id);
+  payload.append("Marca", "SNACKERIA");
+  payload.append("Origen", record.type === "incidencia" ? "Portal de soporte Snackeria" : "Formulario empresarial Snackeria");
+  payload.append("Asunto interno", finalSubject);
+  payload.append("URL del formulario", window.location.href);
+  payload.append("Resumen", buildInternalSummary(values, record));
+  payload.append("ID del reporte", record.id);
   payload.append("Fecha de registro", record.createdAt);
-  payload.append("Tipo", record.type);
+  payload.append("Tipo de formulario", record.type);
 
   const replyEmail = findReplyEmail(values);
   if (replyEmail) {
