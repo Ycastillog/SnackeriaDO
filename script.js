@@ -1,4 +1,5 @@
 const contactEmail = "snackeriado@lps-company.com";
+const formEndpoint = `https://formsubmit.co/ajax/${contactEmail}`;
 const whatsappNumber = "";
 
 const navToggle = document.querySelector(".nav-toggle");
@@ -46,8 +47,44 @@ function saveRecord(key, record) {
   localStorage.setItem(key, JSON.stringify(records));
 }
 
+function findReplyEmail(values) {
+  const emailField = values.find(([key]) => key.toLowerCase().includes("correo"));
+  return emailField ? emailField[1] : "";
+}
+
+async function sendFormToEmail({ values, subject, record }) {
+  const payload = new FormData();
+  payload.append("_subject", subject);
+  payload.append("_template", "table");
+  payload.append("_captcha", "false");
+  payload.append("ID", record.id);
+  payload.append("Fecha de registro", record.createdAt);
+  payload.append("Tipo", record.type);
+
+  const replyEmail = findReplyEmail(values);
+  if (replyEmail) {
+    payload.append("_replyto", replyEmail);
+  }
+
+  values.forEach(([key, value]) => {
+    payload.append(key, value);
+  });
+
+  const response = await fetch(formEndpoint, {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+    },
+    body: payload,
+  });
+
+  if (!response.ok) {
+    throw new Error("No se pudo enviar el formulario.");
+  }
+}
+
 document.querySelectorAll("[data-mail-form]").forEach((form) => {
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     const formData = new FormData(form);
@@ -67,26 +104,39 @@ document.querySelectorAll("[data-mail-form]").forEach((form) => {
     saveRecord(storageKey, record);
 
     const status = form.querySelector(".form-status");
+    const submitButton = form.querySelector(".form-submit");
     if (status) {
       status.hidden = false;
       status.textContent = recordType === "incidencia"
-        ? "Incidencia guardada. Preparando correo de soporte..."
-        : "Solicitud guardada. Preparando correo para Snackeria...";
+        ? "Enviando incidencia a soporte..."
+        : "Enviando solicitud a Snackeria...";
     }
 
-    const lines = [
-      `ID: ${record.id}`,
-      `Fecha: ${record.createdAt}`,
-      `Tipo: ${record.type}`,
-      "",
-      ...values.map(([key, value]) => `${key}: ${value}`),
-    ];
-
     const subject = form.dataset.subject || "Contacto Snackeria";
-    const mailto = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
-    window.setTimeout(() => {
-      window.location.href = mailto;
-    }, 450);
+
+    try {
+      if (submitButton) {
+        submitButton.disabled = true;
+      }
+
+      await sendFormToEmail({ values, subject, record });
+
+      if (status) {
+        status.textContent = recordType === "incidencia"
+          ? "Incidencia enviada. Nuestro equipo de soporte le dará seguimiento."
+          : "Solicitud enviada. Nuestro equipo revisará la ubicación.";
+      }
+
+      form.reset();
+    } catch {
+      if (status) {
+        status.textContent = "No pudimos enviar el formulario ahora mismo. El reporte quedó guardado localmente; intenta nuevamente en unos minutos.";
+      }
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+      }
+    }
   });
 });
 
