@@ -85,7 +85,7 @@ function buildEmailSubject(values, record) {
   if (record.type === "lead") {
     const company = findValue(values, "Empresa") || "empresa";
     const city = findValue(values, "Ciudad") || "sin ciudad";
-    return `[SNACKERIA EMPRESAS] Nueva solicitud - ${company} - ${city}`;
+    return `[SNACKERIA MAQUINA] Solicitud de instalacion - ${company} - ${city}`;
   }
 
   return "[SNACKERIA] Nuevo formulario recibido";
@@ -109,7 +109,8 @@ function buildInternalSummary(values, record) {
   }
 
   return [
-    "SNACKERIA - SOLICITUD EMPRESARIAL",
+    "SNACKERIA - SOLICITUD DE MAQUINA",
+    "Accion requerida: Evaluar ubicacion para instalacion Snackeria",
     `Empresa: ${valueMap.Empresa || "No especificada"}`,
     `Contacto: ${valueMap["Nombre completo"] || "No especificado"}`,
     `Cargo: ${valueMap.Cargo || "No especificado"}`,
@@ -119,6 +120,10 @@ function buildInternalSummary(values, record) {
     `Sector: ${valueMap.Sector || "No especificado"}`,
     `Tipo de establecimiento: ${valueMap["Tipo de establecimiento"] || "No especificado"}`,
     `Personas por día: ${valueMap["Cantidad de personas por día"] || "No especificado"}`,
+    `Tiene solución actualmente: ${valueMap["¿Existe una solución de conveniencia actualmente?"] || "No especificado"}`,
+    `Horario de operación: ${valueMap["Horario de operación"] || "No especificado"}`,
+    `Usuario principal: ${valueMap["Usuario principal"] || "No especificado"}`,
+    `Comentarios: ${valueMap["Comentarios adicionales"] || "Sin comentarios"}`,
   ].join("\n");
 }
 
@@ -130,7 +135,8 @@ async function sendFormToEmail({ values, subject, record }) {
   payload.append("_template", "table");
   payload.append("_captcha", "false");
   payload.append("Marca", "SNACKERIA");
-  payload.append("Origen", record.type === "incidencia" ? "Portal de soporte Snackeria" : "Formulario empresarial Snackeria");
+  payload.append("Origen", record.type === "incidencia" ? "Portal de soporte Snackeria" : "Solicitud de máquina Snackeria");
+  payload.append("Categoría", record.type === "incidencia" ? "Incidencia de soporte" : "Solicitud de máquina / evaluación de ubicación");
   payload.append("Asunto interno", finalSubject);
   payload.append("URL del formulario", window.location.href);
   payload.append("Resumen", buildInternalSummary(values, record));
