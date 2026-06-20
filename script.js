@@ -2,6 +2,24 @@ const contactEmail = "snackeriado@lps-company.com";
 const formEndpoint = `https://formsubmit.co/ajax/${contactEmail}`;
 const whatsappNumber = "";
 
+function trackAnalyticsEvent(eventName, params = {}) {
+  if (typeof window.gtag !== "function") {
+    return;
+  }
+
+  window.gtag("event", eventName, {
+    site_name: "Snackeria",
+    brand_name: "Snackeria",
+    host_name: window.location.hostname,
+    page_location: window.location.href,
+    ...params,
+  });
+}
+
+trackAnalyticsEvent("site_visit", {
+  page_group: window.location.pathname.includes("soporte") ? "Soporte" : "Principal",
+});
+
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
 
@@ -49,6 +67,35 @@ document.querySelectorAll("[data-whatsapp-link]").forEach((link) => {
   } else {
     link.hidden = true;
   }
+});
+
+document.querySelectorAll("a[href]").forEach((link) => {
+  link.addEventListener("click", () => {
+    const href = link.getAttribute("href") || "";
+
+    trackAnalyticsEvent("link_click", {
+      link_text: link.textContent.trim().replace(/\s+/g, " ").slice(0, 80),
+      link_url: href,
+      destination_type: href.startsWith("mailto:")
+        ? "email"
+        : href.includes("instagram")
+          ? "instagram"
+          : href.includes("soporte")
+            ? "support"
+            : href.startsWith("#")
+              ? "section"
+              : "external",
+    });
+  });
+});
+
+document.querySelectorAll("form").forEach((form) => {
+  form.addEventListener("submit", () => {
+    trackAnalyticsEvent("form_submit", {
+      form_id: form.id || "snackeria_form",
+      page_group: window.location.pathname.includes("soporte") ? "Soporte" : "Principal",
+    });
+  });
 });
 
 function readStoredRecords(key) {
